@@ -1,5 +1,6 @@
 let initialState = {
-    products: [],
+    itemsinCart: [],
+
     price: 0,
     product_imgs: '',
     subtotal: 0,

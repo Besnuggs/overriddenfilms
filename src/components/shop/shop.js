@@ -8,7 +8,9 @@ class Shop extends Component {
     constructor(props){
         super(props)
             this.state = {
-            products: []
+            products: [],
+            itemsInCart: 0,
+            itemsGoingToCart: []
             }
     }
 
@@ -17,6 +19,12 @@ axios.get('/api/products/').then((res) => {
     this.setState({
         products: res.data
     })
+})
+}
+
+addToCart(){
+axios.post('/api/cart/').then((res) => {
+    this.setState
 })
 }
 

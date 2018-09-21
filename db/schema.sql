@@ -9,7 +9,7 @@ create table products (
 id SERIAL PRIMARY KEY,
 name text,
 price decimal,
-description varchar(120),
+description TEXT,
 product_type TEXT,
 category_id integer REFERENCES categories(category_id)
 );

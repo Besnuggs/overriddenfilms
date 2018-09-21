@@ -10,7 +10,7 @@ VALUES
 
 insert into imgs
 (frontal_img, back_img, main, product_id)
-VALUES('https://s3.us-east-2.amazonaws.com/devmountainpersonalproject/whitemugwithlogo.png','https://s3.us-east-2.amazonaws.com/devmountainpersonalproject/whitemugwithlogo.png',true, 1) ;
+VALUES('https://s3.us-east-2.amazonaws.com/devmountainpersonalproject/whitemugwithlogo.png','https://s3.us-east-2.amazonaws.com/devmountainpersonalproject/whitemugwithlogo.png',true, 1);
 
 insert into users
 (first_name, last_name, auth_id)

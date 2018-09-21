@@ -3,7 +3,7 @@ import React from 'react'
 function ProductCard(props){
     console.log(props)
 return(
-    <div>
+    <div className="product-card">
         <p>Product Card</p>
         <p>{props.name}</p>
         <img src={props.back_img} alt='products' />
