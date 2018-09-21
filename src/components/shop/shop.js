@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios';
 import ProductCard from '../productcard/productcard'
+import {connect} from '../../ducks/reducer'
 
 
 class Shop extends Component {

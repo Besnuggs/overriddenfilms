@@ -14,7 +14,6 @@ product_type TEXT,
 category_id integer REFERENCES categories(category_id)
 );
 
-
 drop table if exists imgs;
 create table imgs (
 id SERIAL PRIMARY KEY,

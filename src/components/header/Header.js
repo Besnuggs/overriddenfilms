@@ -11,9 +11,10 @@ class Header extends Component {
             <div className="Nav Links">
             <Link to='/'><p>Home</p></Link> 
             <Link to='/portfolio'><p>Portfolio</p></Link>
-            <Link to='/dashboard'><p>About</p></Link>
+            <Link to='/expertise'><p>About</p></Link>
             <Link to='/login'><p>Account</p></Link>
             <Link to='/shop'><p>Shop</p></Link>
+            <Link to='/cart'><p>Cart</p></Link>
             </div>
             </div>
           );

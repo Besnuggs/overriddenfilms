@@ -4,7 +4,7 @@ function ProductCard(props){
     console.log(props)
 return(
     <div>
-        <p>product card</p>
+        <p>Product Card</p>
         <p>{props.name}</p>
         <img src={props.back_img} alt='products' />
         <p>{props.description}</p>
