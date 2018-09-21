@@ -1,0 +1,9 @@
+.header_bar{
+    position: fixed;
+    top:0;
+}
+
+.Override_logo{
+    width: 100px;
+    height: 100px;
+}

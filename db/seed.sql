@@ -6,12 +6,11 @@ VALUES
 insert into products
 (name, price, description, product_type, category_id)
 VALUES
-('Generic Mug', 4.99, 'This generic mug is dumb and therefore occupying dumby data in my database for tests', 'mugs', 5 );
+('White Override Mug', 4.99, 'Enjoy your morning coffee with one of our mugs!', 'mugs', 5);
 
 insert into imgs
-(name, frontal_img, back_img, main, product_id)
-VALUES
-('Generic Mug','https://images-na.ssl-images-amazon.com/images/I/41%2BgSo%2Bmq-L._SL500_AC_SS350_.jpg','https://images-na.ssl-images-amazon.com/images/I/41%2BgSo%2Bmq-L._SL500_AC_SS350_.jpg',true, 1 ;
+(frontal_img, back_img, main, product_id)
+VALUES('https://s3.us-east-2.amazonaws.com/devmountainpersonalproject/whitemugwithlogo.png','https://s3.us-east-2.amazonaws.com/devmountainpersonalproject/whitemugwithlogo.png',true, 2) ;
 
 insert into users
 (first_name, last_name, auth_id)

@@ -13,19 +13,21 @@ class Shop extends Component {
 
 componentDidMount(){
 axios.get('/api/products/').then((res) => {
-    this.setState({products: res})
+    this.setState({
+        products: res.data
+    })
 })
 }
 
 render(props) {
 console.log(this.state)
 let productInfo = this.state.products.map((Info,Index) => {
-const {id, name, front_img, back_img, price, description, product_type, category_id} = Info
+const {id, name, frontal_img, back_img, price, description, product_type, category_id} = Info
 return(
 <ProductCard
 id={id}
 name={name}
-front_img={front_img}
+frontal_img={frontal_img}
 back_img={back_img}
 price={price}
 description={description}
@@ -38,6 +40,7 @@ return (
      <div>
          <h1>Overridden Films Shop</h1>
          <ProductCard />
+         {productInfo}
      </div>  
      );
     }

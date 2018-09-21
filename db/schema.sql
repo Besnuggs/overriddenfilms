@@ -7,7 +7,7 @@ product_type TEXT
 drop table if exists products;
 create table products (
 id SERIAL PRIMARY KEY,
-name varchar(20),
+name text,
 price decimal,
 description varchar(120),
 product_type TEXT,
@@ -29,7 +29,7 @@ create table users (
 user_id SERIAL PRIMARY KEY,
 first_name TEXT,
 last_name TEXT,
-auth_id INTEGER
+auth_id text
 );
 
 drop table if exists cart;

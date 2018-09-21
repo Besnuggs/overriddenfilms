@@ -8,7 +8,8 @@ const express = require('express'),
       const app = express();
       app.use(bodyParser.json())
 
-      // Destructuring from dotenv file
+
+//*******************AUTH0********************************/
   const {
     PORT,
     SESSION_SECRET,
@@ -74,6 +75,7 @@ app.get('/logout', (req, res) => {
     res.redirect('http://localhost:3000/')
 })
 
+//*************ListeningOnPort*******************************/
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 })
@@ -87,7 +89,7 @@ app.use(session({
   saveUninitialized:true
 }))
 
-//endpoints
+//******************ENDPOINTS********************************/
 app.get('/api/products/', ctrl.getProducts)
 
 

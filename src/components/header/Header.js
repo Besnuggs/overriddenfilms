@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import overridefilmslogo from "./overridefilmslogo.jpg";
+import './header.css'
 
 class Header extends Component {
     render() { 
         return (
-            <div>
-            <h1>header</h1>
+            <div className="header_bar">
+            <img src={overridefilmslogo} alt="Override Films logo" className="Override_logo"/>
+            <div className="Nav Links">
             <Link to='/'><p>Home</p></Link> 
             <Link to='/portfolio'><p>Portfolio</p></Link>
-            <Link to='Dashboard'><p>About</p></Link>
+            <Link to='/dashboard'><p>About</p></Link>
             <Link to='/login'><p>Account</p></Link>
             <Link to='/shop'><p>Shop</p></Link>
+            </div>
             </div>
           );
     }
