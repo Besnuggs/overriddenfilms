@@ -38,7 +38,7 @@ app.get(`/auth/callback`, async (req,res) => {
         client_secret: CLIENT_SECRET,
         code: req.query.code,
         grant_type: 'authorization_code',
-        redirect_uri: `http://${req.headers.host}/auth/callback`
+        redirect_uri: `http://${req.headers.host}/auth/callback/shop`
     }
     //post request with code for token
    let tokenRes = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload);
@@ -57,9 +57,7 @@ app.get(`/auth/callback`, async (req,res) => {
        // [ {name, email, picture, auth_id }]
        req.session.user = createdUser[0]
     }
-    res.redirect('/#/private');
-
-
+    res.redirect('/#/account');
 })
 
 app.get(`/api/user-data`, (req,res) => {
@@ -72,7 +70,7 @@ app.get(`/api/user-data`, (req,res) => {
 
 app.get('/logout', (req, res) => {
     req.session.destroy();
-    res.redirect('http://localhost:3000/')
+    res.redirect('http://localhost:4051/')
 })
 
 //*************ListeningOnPort*******************************/
@@ -89,8 +87,14 @@ app.use(session({
   saveUninitialized:true
 }))
 
+// *********************************************************/
+
 //******************ENDPOINTS********************************/
 app.get('/api/products/', ctrl.getProducts)
+
+
+//*********************STRIP ENDPOINTS*************************************/
+app.post('/api/payment', ctrl.handlePayment)
 
 
 //endpoints Auth0

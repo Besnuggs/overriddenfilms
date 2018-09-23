@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import axios from 'axios';
 import ProductCard from '../productcard/productcard'
-import {connect} from '../../ducks/reducer'
+import {connect} from 'react-redux'
+import {updateStateCart} from '../../ducks/reducer'
 
 
 class Shop extends Component {
@@ -24,7 +25,7 @@ axios.get('/api/products/').then((res) => {
 
 addToCart(){
 axios.post('/api/cart/').then((res) => {
-    this.setState
+    this.setState({itemsGoingToCart: res.data})
 })
 }
 
@@ -48,11 +49,16 @@ category_id={category_id}
 return (
      <div>
          <h1>Overridden Films Shop</h1>
-         <ProductCard />
          {productInfo}
      </div>  
      );
     }
 }
- 
-export default Shop;
+
+function mapStateToProps(state){
+return{
+    
+}
+}
+
+export default connect (mapStateToProps, updateStateCart) (Shop);
