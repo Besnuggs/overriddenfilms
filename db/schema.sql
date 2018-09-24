@@ -23,13 +23,16 @@ main boolean,
 product_id integer REFERENCES products(id)
 );
 
-drop table if exists users;
-create table users (
-user_id SERIAL PRIMARY KEY,
-first_name TEXT,
-last_name TEXT,
+
+
+drop table if exists users
+create table users
+(user_id serial primary key,
+user_name varchar(180),
+email varchar(180),
+picture text,
 auth_id text
-);
+)
 
 drop table if exists cart;
 create table cart (

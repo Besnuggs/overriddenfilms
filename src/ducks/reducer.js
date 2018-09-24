@@ -1,22 +1,25 @@
 let initialState = {
-    itemsinCart: [],
-    price: 0,
-    product_imgs: '',
-    subtotal: 0,
-    total: 0
+    products: [],
+    shopCart: []
 }
 
 // Action Types
-const UPDATE_STATE_CART = "UPDATE_STATE_CART"
-
- 
+const ADD_TO_SHOPPING_CART = "ADD_TO_SHOPPING_CART"
+const REMOVE_FROM_SHOPPING_CART = "REMOVE_FROM_SHOPPING_CART"
 
 
 // Action Creators
-export function updateStateCart(cartInfo) {
-    return{
-        type: UPDATE_STATE_CART,
-        payload: cartInfo
+export function addToShopCart(product) {
+    return {
+        type: ADD_TO_SHOPPING_CART,
+        payload: product
+    }
+}
+
+export function removeFromShopCart(productIndex) {
+    return {
+        type: REMOVE_FROM_SHOPPING_CART,
+        payload: productIndex
     }
 }
 
@@ -24,7 +27,7 @@ export function updateStateCart(cartInfo) {
 // Reducer Function
 function reducer (state=initialState, action){
 switch(action.type){
-    case UPDATE_STATE_CART:
+    case ADD_TO_SHOPPING_CART:
     let {itemsinCart, price, product_imgs, subtotal, total} = action.payload
     return Object.assign({}, state, 
         {

@@ -60,7 +60,7 @@ app.get(`/auth/callback`, async (req,res) => {
     res.redirect('/#/account');
 })
 
-app.get(`/api/user-data`, (req,res) => {
+app.get(`/api/user/`, (req,res) => {
     if (req.session.user) {
         res.status(200).send(req.session.user);
     } else {
@@ -91,9 +91,10 @@ app.use(session({
 
 //******************ENDPOINTS********************************/
 app.get('/api/products/', ctrl.getProducts)
+app.post('/api/cart', ctrl.addToCart)
 
 
-//*********************STRIP ENDPOINTS*************************************/
+//*********************STRIPE ENDPOINTS*************************************/
 app.post('/api/payment', ctrl.handlePayment)
 
 

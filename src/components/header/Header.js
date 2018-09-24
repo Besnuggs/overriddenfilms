@@ -8,10 +8,11 @@ class Header extends Component {
         return (
             <div className="header_bar">
             <img src={overridefilmslogo} alt="Override Films logo" className="Override_logo"/>
-            <div className="Nav Links">
+            
+            <div className="Nav-links">
             <Link to='/'><p>Home</p></Link> 
             <Link to='/portfolio'><p>Portfolio</p></Link>
-            <Link to='/expertise'><p>About</p></Link>
+            <Link to='/about'><p>About</p></Link>
             <Link to='/login'><p>Account</p></Link>
             <Link to='/shop'><p>Shop</p></Link>
             <Link to='/cart'><p>Cart</p></Link>

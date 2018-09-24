@@ -12,8 +12,13 @@ getProducts: (req,res,then) => {
         res.status(500).send(err)
     })
 },
-//  addProducts = (req,res,then) => {
-    handlePayment: (req, res) => {
+
+addToCart: (req,res,then) => { 
+
+
+
+},
+handlePayment: (req, res) => {
         const { amount, token:{id}} = req.body
         stripe.charges.create(
             {

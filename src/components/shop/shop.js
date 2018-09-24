@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios';
 import ProductCard from '../productcard/productcard'
 import {connect} from 'react-redux'
-import {updateStateCart} from '../../ducks/reducer'
+import {addToShopCart} from '../../ducks/reducer'
 
 
 class Shop extends Component {
@@ -43,12 +43,19 @@ price={price}
 description={description}
 product_type={product_type}
 category_id={category_id}
+addToCart={this.addToCart}
 />
 )})
 
 return (
      <div>
          <h1>Overridden Films Shop</h1>
+         <button>All</button>
+         <button>Shirts</button>
+         <button>Mugs</button>
+         <button>Hats</button>
+         <button>Bags</button>
+         <button>Stickers</button>
          {productInfo}
      </div>  
      );
@@ -61,4 +68,4 @@ return{
 }
 }
 
-export default connect (mapStateToProps, updateStateCart) (Shop);
+export default connect (mapStateToProps, addToShopCart) (Shop);

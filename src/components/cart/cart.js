@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios'
+import overridefilmslogo from './../../imgs/overridefilmslogo.jpg'
+import {connect} from 'react-redux'
+
 
 
 class Cart extends Component {
@@ -22,19 +25,22 @@ class Cart extends Component {
         return (
             <div>
                 <h1>Shopping Cart</h1>
+
                 <div className="Shoppingtable">
                 <h3>Item Description</h3>
+
+                </div>
+
                 <div className="checkOut table">
                 <h3>Order Summary</h3>
                 <StripeCheckout
                 name="Override Films"
                 description="Override Films Merchandise Shop"
-                image="http://via.placeholder.com/100x100"
+                image={overridefilmslogo}
                 token= {this.onToken}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
                 amount={this.state.amount}
             />
-                </div>
                 </div>            
             </div>
           );

@@ -5,7 +5,7 @@ import login from './components/login/login';
 import cart from './components/cart/cart';
 import portfolio from './components/portfolio/portfolio';
 import shop from './components/shop/shop'
-import expertise from './components/expertise/expertise';
+import about from './components/about/about';
 
 export default (
     <Switch>
@@ -14,6 +14,6 @@ export default (
         <Route path="/cart" component={cart} />
         <Route path="/portfolio" component={portfolio} />
         <Route path="/shop" component={shop} />
-        <Route path="/expertise" component={expertise} />
+        <Route path="/about" component={about} />
     </Switch>
 )
